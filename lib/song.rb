@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
 
   @@all = []
@@ -6,10 +8,12 @@ class Song
 
   def initialize(name = nil, artist = nil)
     @name = name
+    @artist = artist
     @@all << self
   end
 
   def self.all
     @@all
   end
+
 end
