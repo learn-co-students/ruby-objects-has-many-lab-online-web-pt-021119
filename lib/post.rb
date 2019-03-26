@@ -2,12 +2,11 @@ class Post
   
   attr_accessor :title, :author
   
-  
+     @@all = []
   def initialize(title)
     @title = title
-    @@all = []
-    
-    @@all << title
+ #binding.pry
+    @@all << self
   end 
 
   def self.all 
@@ -18,7 +17,12 @@ class Post
     @title
   end
   
-  def author
+  def author_name
+    if @author
+      @author.name
+    else 
+      nil 
+    end 
+  end
   
-  end 
 end
